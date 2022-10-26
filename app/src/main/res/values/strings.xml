@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CineApp</string>
+    <string name="moviepicture">moviePicture</string>
+    <string name="vu_avec">Vu avec :</string>
+    <string name="realisateur">Réalisateur</string>
+    <string name="titre">Titre</string>
+    <string name="photo">photoDeFilm</string>
+    <string name="date_de_visionnage">Date de visionnage :</string>
+    <string name="lieu">Lieu :</string>
+    <string name="entrer_vos_partenaires">Entrer vos partenaires</string>
+    <string name="cinema">Cinéma</string>
+    <string name="theatre">Théâtre</string>
+    <string name="tv">TV</string>
+    <string name="date">01 JAN 2000</string>
+    <string name="partenaires">partenaires</string>
+</resources>
