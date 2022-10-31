@@ -5,11 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initDatePicker();
-        dateButton = findViewById(R.id.datePickerButton);
+        dateButton = findViewById(R.id.filmDate);
         dateButton.setText(getTodaysDate());
     }
 
@@ -66,5 +75,36 @@ public class MainActivity extends AppCompatActivity {
 
     public void openDatePicker(View view) {
         datePickerDialog.show();
+    }
+
+    public void saveData(View view){
+
+        String title = ((EditText) findViewById(R.id.filmTitle)).getText().toString();
+        String director = ((EditText) findViewById(R.id.filmDirector)).getText().toString();
+        String partners = ((EditText) findViewById(R.id.filmPartners)).getText().toString();
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.filmPlace);
+        RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
+        String date = ((Button) findViewById(R.id.filmDate)).getText().toString();
+
+        if(!title.equals("") && !director.equals("") && !partners.equals("") && !date.equals("") && radioButton != null) {
+
+            String place = radioButton.getText().toString();
+
+            Film film = new Film(
+                    title,
+                    director,
+                    partners,
+                    place,
+                    date);
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myFilm = database.getReference().child("films").push();
+            myFilm.child("film").setValue(film);
+
+            Toast.makeText(MainActivity.this, "Le film a bien été sauvegardé !", Toast.LENGTH_LONG).show();
+
+        }else{
+            Toast.makeText(MainActivity.this, "Veuillez remplir tous les champs !", Toast.LENGTH_LONG).show();
+        }
     }
 }

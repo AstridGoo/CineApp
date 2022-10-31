@@ -13,4 +13,5 @@
     <string name="tv">TV</string>
     <string name="date">01 JAN 2000</string>
     <string name="partenaires">partenaires</string>
+    <string name="saveFilmButton">Enregistrer</string>
 </resources>
