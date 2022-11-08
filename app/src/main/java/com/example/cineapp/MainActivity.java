@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -125,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(MainActivity.this, "Le film a bien été sauvegardé !", Toast.LENGTH_LONG).show();
 
+            Intent intent = new Intent(this, ListViewSample.class);
+            startActivity(intent);
         }else{
             Toast.makeText(MainActivity.this, "Veuillez remplir tous les champs !", Toast.LENGTH_LONG).show();
         }
