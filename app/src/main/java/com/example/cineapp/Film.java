@@ -1,8 +1,9 @@
 package com.example.cineapp;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Film {
+public class Film implements Serializable {
     private String title;
     private String director;
     private String partners;

@@ -81,7 +81,11 @@ public class ListViewSample extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.i("INFO", films.get(position).getTitle());
                 Log.i("CUSTOM_LIST_VIEW", "Item is clicked @ Position :: " + position);
+                Intent intent = new Intent(getApplicationContext(), MovieView.class);
+                intent.putExtra("film", films.get(position));
+                startActivity(intent);
             }
         });
     }
