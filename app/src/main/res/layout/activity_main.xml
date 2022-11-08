@@ -14,7 +14,7 @@
         android:layout_height="218dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/photo"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:srcCompat="@drawable/icon_cinema" />
 
     <EditText
         android:id="@+id/filmTitle"

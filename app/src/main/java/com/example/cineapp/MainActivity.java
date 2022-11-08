@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
+    private RadioGroup group;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,25 @@ public class MainActivity extends AppCompatActivity {
         initDatePicker();
         dateButton = findViewById(R.id.filmDate);
         dateButton.setText(getTodaysDate());
+
+        imageView = findViewById(R.id.imageView2);
+        group = findViewById(R.id.filmPlace);
+        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.btnCinema:
+                        imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_cinema));
+                        break;
+                    case R.id.btnTheatre:
+                        imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_theatre));
+                        break;
+                    case R.id.btnTV:
+                        imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon_tv));
+                        break;
+                }
+            }
+        });
     }
 
     private String getTodaysDate() {
