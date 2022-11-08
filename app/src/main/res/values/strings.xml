@@ -16,4 +16,6 @@
     <string name="saveFilmButton">Enregistrer</string>
     <string name="myMovieTitle">MyText</string>
     <string name="imageIcon">TODO</string>
+    <string name="buttonplus">ButtonPlus</string>
+    <string name="plus">+</string>
 </resources>
