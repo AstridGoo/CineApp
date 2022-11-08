@@ -17,6 +17,9 @@ public class Film {
         this.seenDate = seenDate;
     }
 
+    public Film() {
+    }
+
     public String getTitle() {
         return title;
     }

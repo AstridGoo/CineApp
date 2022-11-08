@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myFilm = database.getReference().child("films").push();
-            myFilm.child("film").setValue(film);
+            myFilm.setValue(film);
 
             Toast.makeText(MainActivity.this, "Le film a bien été sauvegardé !", Toast.LENGTH_LONG).show();
 
