@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.movie_list);
+        setContentView(R.layout.activity_main);
         initDatePicker();
         dateButton = findViewById(R.id.filmDate);
         dateButton.setText(getTodaysDate());
