@@ -18,4 +18,7 @@
     <string name="imageIcon">TODO</string>
     <string name="buttonplus">ButtonPlus</string>
     <string name="plus">+</string>
+    <string name="textAmis">AMIS</string>
+    <string name="textLieu">LIEU</string>
+    <string name="viewDate">DATE</string>
 </resources>

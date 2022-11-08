@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D"
+    tools:context=".MovieView">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/photo"
+        app:srcCompat="@drawable/icon_cinema" />
+
+    <EditText
+        android:id="@+id/filmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:hint="@string/titre"
+        android:inputType="text"
+        android:textColor="@color/design_default_color_error"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/filmDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filmTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:autofillHints=""
+        android:hint="@string/realisateur"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/design_default_color_error"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filmDirector"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/vu_avec"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/lieu"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/date_de_visionnage"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewAmis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView4"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:text="@string/textAmis"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewLieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView5"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/textView5"
+        android:text="@string/textLieu"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView6"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:text="@string/viewDate"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
